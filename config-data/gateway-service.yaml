@@ -27,31 +27,31 @@ spring:
             allow-credentials: true 
       routes:
         - id: marca-service
-          uri: http://localhost:8008
+          uri: lb://marca-service
           predicates:
             - Path=/marcas/**
 
         - id: inasistencia-service
-          uri: http://localhost:8009
+          uri: lb://inasistencia-service
           predicates:
             - Path=/inasistencias/**
 
         - id: horaextra-service
-          uri: http://localhost:8010
+          uri: lb://horaextra-service
           predicates:
             - Path=/horaextra/**
 
         - id: sueldo-service
-          uri: http://localhost:8011
+          uri: lb://sueldo-service
           predicates:
             - Path=/sueldos/**
 
         - id: sueldo-service
-          uri: http://localhost:8011
+          uri: lb://sueldo-service
           predicates:
             - Path=/descuento/**
             
         - id: sueldo-service
-          uri: http://localhost:8011
+          uri: lb://sueldo-service
           predicates:
             - Path=/empleado/**
