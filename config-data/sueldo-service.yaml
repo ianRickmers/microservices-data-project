@@ -1,6 +1,13 @@
 spring:
   application:
     name: sueldo-service
+  # datasource:
+  #   url: jdbc:mysql://localhost:3306/bdsueldos
+  #   username: root
+  #   password: password
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
 server:
   port: 8011
   forward-headers-strategy: framework

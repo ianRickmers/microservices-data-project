@@ -1,15 +1,6 @@
 server:
   port: 8012
 
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      default-zone: ${EUREKA_URL:http://localhost:8761/eureka}
-  # instance:
-  #   hostname: localhost
-
 spring:
   application:
     name: gateway-service
@@ -57,3 +48,12 @@ spring:
           uri: lb://sueldo-service
           predicates:
             - Path=/empleado/**
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: ${EUREKA_URL:http://localhost:8761/eureka}
+   instance:
+     hostname: localhost
